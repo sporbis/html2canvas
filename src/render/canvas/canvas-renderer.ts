@@ -144,6 +144,7 @@ export class CanvasRenderer {
     }
 
     renderTextWithLetterSpacing(text: TextBounds, letterSpacing: number) {
+        this.ctx.textBaseline = 'ideographic';
         if (letterSpacing === 0) {
             this.ctx.fillText(text.text, text.bounds.left, text.bounds.top + text.bounds.height);
         } else {
